@@ -1,0 +1,7 @@
+.centered {
+    /* position: fixed; Position the element relative to the viewport */
+    /* margin-top: 50%; Move the element 50% down from the top */
+    margin-left: 40%; /* Move the element 50% from the left */
+    /* transform: translate(-50%, -50%); Center the element */
+    margin-top: 6%;
+  }

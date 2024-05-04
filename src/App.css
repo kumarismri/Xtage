@@ -3,8 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
+} 
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -18,14 +18,6 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -39,4 +31,10 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
+
+/* .container{
+  background-image: url('https://brocku.ca/brock-news/wp-content/uploads/2023/07/GettyImages-1186776186-1600x900.jpg?x70330');
+} */
+
+

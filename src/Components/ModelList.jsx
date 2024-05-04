@@ -1,46 +1,3 @@
-// import * as React from "react";
-// import Card from "@mui/material/Card";
-// import CardActions from "@mui/material/CardActions";
-// import CardContent from "@mui/material/CardContent";
-// import Button from "@mui/material/Button";
-// import Typography from "@mui/material/Typography";
-// import Grid from "@mui/material/Grid";
-
-// const ModelList = ({ data , onItemClick }) => {
-//     console.log("Data in ModelList:", data);
-//     if (!data || data.length === 0) {
-//         return <div>No data available</div>;
-//       }
-// //   console.log("Data in ModelList:", data); // Log data received from props
-
-// const handleItemClick = (item) => {
-//     onItemClick(item);
-//   };
-
-//   return (
-//     <>
-//       <Grid className="container" container gap={2}>
-//         {data.map((item) => (
-//           <Card onClick={() => handleItemClick(item)} style={{width:"30vh"}} key={item.id}> {/* Added key attribute */}
-//             <CardContent>
-//               <Typography gutterBottom variant="h5" component="div">
-//                 {item.name}
-//               </Typography>
-//             </CardContent>
-//             <CardActions>
-//               <Button size="small">Learn More</Button>
-//             </CardActions>
-//           </Card>
-//         ))}
-//       </Grid>
-//     </>
-//   );
-// };
-
-// export default ModelList;
-
-
-// ModelList.js
 import React from "react";
 import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
@@ -48,27 +5,38 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import "./ModelList.css";
 
 const ModelList = ({ data }) => {
+
   return (
-    <Grid container spacing={2}>
-      {data.map((item) => (
-        <Grid item xs={12} sm={6} md={4} key={item.id}>
-          <Link to={`/details/${item.id}`} style={{ textDecoration: "none" }}>
-            <Card>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {item.name}
-                </Typography>
-              </CardContent>
-              <Button size="small">Learn More</Button>
-            </Card>
-          </Link>
+    <div>
+      {/* <h1 className="Models">Other Popular Models</h1> */}
+      {/*<h1 className="the">AI</h1> */}
+      <div className="main-container">
+      <h4 className="fav-models">Other Popular Models</h4>
+        <Grid container spacing={2}>
+          {data.map((item) => (
+            <Grid item xs={12} sm={6} md={4} key={item.id}>
+              <Link
+                to={`/details/${item.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <Card style={{display:"flex",flexDirection: "column",height: "100%"}}>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {item.name}
+                    </Typography>
+                  </CardContent>
+                  <Button size="small">Explore</Button>
+                </Card>
+              </Link>
+            </Grid>
+          ))}
         </Grid>
-      ))}
-    </Grid>
+      </div>
+    </div>
   );
 };
 
 export default ModelList;
-

@@ -33,11 +33,11 @@
 
 // export default Apicall;
 
-
 // Apicall.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ModelList from "../Components/ModelList";
+import Form from "../Components/Form";
 
 const Apicall = ({ onItemClick }) => {
   const [data, setData] = useState([]);
@@ -46,7 +46,7 @@ const Apicall = ({ onItemClick }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://mocki.io/v1/4a328d87-7495-45be-b740-c6310f0379f5`
+          `https://mocki.io/v1/d4d07199-812f-4041-b214-8fe1a45e9e1e`
         );
         setData(response.data.models);
       } catch (error) {
@@ -57,8 +57,12 @@ const Apicall = ({ onItemClick }) => {
     fetchData();
   }, []);
 
-  return <ModelList data={data} onItemClick={onItemClick} />;
+  return (
+    <>
+      <ModelList data={data} onItemClick={onItemClick} />
+      <Form />
+    </>
+  );
 };
 
 export default Apicall;
-
