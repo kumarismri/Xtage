@@ -33,7 +33,7 @@ const TopModels = () => {
         <h1 className="Models">Models</h1>
         <h1 className="the">AI</h1>
         <div className="top-model-container">
-        <h4 className="fav-models">Users Favorite Models</h4>
+        <h3 className="fav-models">Users Favorite Models</h3>
         <Grid container spacing={2}>
           {data
             .filter((val) => val.id >= "3" && val.id < "6")

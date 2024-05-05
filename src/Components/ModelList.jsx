@@ -14,7 +14,7 @@ const ModelList = ({ data }) => {
       {/* <h1 className="Models">Other Popular Models</h1> */}
       {/*<h1 className="the">AI</h1> */}
       <div className="main-container">
-      <h4 className="fav-models">Other Popular Models</h4>
+      <h3 className="fav-models">Other Popular Models</h3>
         <Grid container spacing={2}>
           {data.map((item) => (
             <Grid item xs={12} sm={6} md={4} key={item.id}>
